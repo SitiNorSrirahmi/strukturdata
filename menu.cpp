@@ -4,6 +4,12 @@ using namespace std;
 
 int n;
 
+void tukar(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
 void dMenu(){
 system("cls");
 cout<<"Aplikasi Sorting Bubble"<<"\n";       
@@ -16,17 +22,19 @@ cout<<"Masukan angka :";
 
 }
 
-void mPertama(string pesan){
+void mPertama(string pesan, int data[]){
 system("cls");
-cout<<"hallo saya menu "<<pesan;
-getch();
+    if (pesan == "pertama") {
+        cout << "Masukkan jumlah data: ";
+        cin >> n; 
+        for (int i = 0; i < n; i++) {
+            cout << "Masukkan data ke-" << (i + 1) << ": ";
+            cin >> data[i]; 
+        }
+    }
+    getch();
 }
 
-void tukar(int *a, int *b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
-}
 
 
 int main() {
@@ -43,18 +51,18 @@ do
   {
    case '1':
     /* code */
-    mPertama("pertama");
+    mPertama("pertama", data);
     break;
    case '2':
-    mPertama("ke- dua");
+    mPertama("ke- dua", data);
     /* code */ 
     break;  
    case '3':
-    mPertama("ke- tiga");
+    mPertama("ke- tiga", data);
     /* code */
     break;  
    case '4':
-    mPertama("ke- empat");
+    mPertama("ke- empat", data);
     /* code */
     break;  
   case '5':
