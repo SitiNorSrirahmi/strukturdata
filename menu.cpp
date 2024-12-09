@@ -2,6 +2,8 @@
 #include <conio.h>
 using namespace std;
 
+int n;
+
 void dMenu(){
 system("cls");
 cout<<"Aplikasi Sorting Bubble"<<"\n";       
@@ -20,8 +22,18 @@ cout<<"hallo saya menu "<<pesan;
 getch();
 }
 
+void tukar(int *a, int *b) {
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
 
 int main() {
+
+int data[100];
+
+n = 10;
 char pl;
 do
 {
