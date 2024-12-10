@@ -69,7 +69,21 @@ void sortingasc(int data[]){
 
 void sortingdsc(int data[]){
   system("cls");
-  
+  if (n <= 0) {
+        cout << "Data kosong. Masukkan data terlebih dahulu.\n";
+    } else {
+        // Proses Bubble Sort
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (data[j] < data[j + 1]) { 
+                    // Tukar jika elemen saat ini lebih besar dari elemen berikutnya
+                    tukar(&data[j], &data[j + 1]);
+                }
+            }
+        }
+        cout << "Data berhasil diurutkan secara descending.\n";
+    }
+    getch();
 }
 
 int main() {
