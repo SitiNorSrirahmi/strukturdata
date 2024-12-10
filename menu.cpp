@@ -5,9 +5,9 @@ using namespace std;
 int n;
 
 void tukar(int *a, int *b) {
-  int temp = *a;
+  int t = *a;
   *a = *b;
-  *b = temp;
+  *b = t;
 }
 
 void dMenu(){
@@ -35,7 +35,28 @@ system("cls");
     getch();
 }
 
+void tampildata(int data[]) {
+    system("cls");
+    if (n > 0) {
+        cout << "Data yang ada:\n";
+        for (int i = 0; i < n; i++) {
+            cout << "Data ke-" << (i + 1) << ": " << data[i] << "\n";
+        }
+    } else {
+        cout << "Data kosong. Masukkan data terlebih dahulu.\n";
+    }
+    getch();
+}
 
+void sortingasc(int data[]){ 
+  system("cls");
+  
+}
+
+void sortingdsc(int data[]){
+  system("cls");
+  
+}
 
 int main() {
 
@@ -54,15 +75,15 @@ do
     mPertama("pertama", data);
     break;
    case '2':
-    mPertama("ke- dua", data);
+    tampildata(data);
     /* code */ 
     break;  
    case '3':
-    mPertama("ke- tiga", data);
+    sortingasc(data);
     /* code */
     break;  
    case '4':
-    mPertama("ke- empat", data);
+    sortingdsc(data);
     /* code */
     break;  
   case '5':
